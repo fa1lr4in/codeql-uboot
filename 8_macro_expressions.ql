@@ -1,9 +1,9 @@
 import cpp
 
-from Macro m, MacroInvocation ma
+from Macro m, MacroInvocation mi
 where
-    // ma.getMacro() = m and
-    // m.getName().regexpMatch("ntoh.+")
-    ma.getMacro().getName().regexpMatch("ntoh.+")
+    mi.getMacro() = m and
+    m.getName().regexpMatch("ntoh.+")
+    // mi.getMacro().getName().regexpMatch("ntoh.+")
     
-select ma.getExpr()
+select mi.getExpr()
